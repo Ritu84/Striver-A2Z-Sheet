@@ -1,0 +1,27 @@
+1. Count the digigts:
+//Given a number N. Count the number of digits in N which evenly divides N.
+
+//Note :- Evenly divides means whether N is divisible by a digit i.e. leaves a remainder 0 when divided.
+
+int evenlyDivides(int N)
+    {
+        
+        int n = N;
+
+        //code here
+
+        int cnt = 0;
+
+        while(n > 0) {
+
+            int digit = n%10;
+
+            if(digit != 0 && N % digit == 0) cnt++;
+
+            n /= 10;
+
+        }
+
+        return cnt;
+        
+    }
